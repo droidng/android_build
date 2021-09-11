@@ -425,6 +425,9 @@ ifndef is_sdk_build
 endif
 endif
 
+# enable userdebug features in any case
+ADDITIONAL_SYSTEM_PROPERTIES += ro.debuggablr=1
+
 ## asan ##
 
 # Install some additional tools on ASAN builds IFF we are also installing debug tools
