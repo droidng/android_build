@@ -5993,6 +5993,10 @@ endif
 
 include $(BUILD_SYSTEM)/sdk_font.mk
 
+
+mat_sdk_deps_fix := out/soong/host/linux-x86/bin/dmtracedump out/soong/host/linux-x86/bin/etc1tool out/soong/host/linux-x86/lib64/libaapt2_jni.so out/soong/host/linux-x86/bin/aapt out/soong/host/linux-x86/bin/aapt2 out/soong/host/linux-x86/bin/aidl out/soong/host/linux-x86/bin/split-select out/soong/host/linux-x86/bin/zipalign out/soong/host/linux-x86/bin/llvm-rs-cc out/soong/host/linux-x86/bin/bcc_compat out/soong/host/linux-x86/bin/dx out/soong/host/linux-x86/bin/apksigner
+
+
 deps := \
 	$(target_notice_file_txt) \
 	$(tools_notice_file_txt) \
@@ -6014,7 +6018,8 @@ deps := \
 	$(sdk_atree_files) \
 	$(HOST_OUT_EXECUTABLES)/atree \
 	$(HOST_OUT_EXECUTABLES)/line_endings \
-	$(SDK_FONT_DEPS)
+	$(SDK_FONT_DEPS) \
+	$(mat_sdk_deps_fix)
 
 INTERNAL_SDK_TARGET := $(sdk_dir)/$(sdk_name).zip
 $(INTERNAL_SDK_TARGET): PRIVATE_NAME := $(sdk_name)
