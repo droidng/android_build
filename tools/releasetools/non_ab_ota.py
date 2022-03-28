@@ -225,7 +225,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
   device = target_info.GetBuildProp("ro.lineage.device")
   script.Print(" =============================================")
-  script.Print("          Welcome to Project Materium         ")
+  script.Print("              Welcome to droid-ng             ")
   script.Print("          Thanks for using our ROM :)         ")
   script.Print(" =============================================")
   script.Print(" %s"%(rom_version))
