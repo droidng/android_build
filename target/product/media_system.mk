@@ -53,6 +53,7 @@ PRODUCT_SYSTEM_SERVER_JARS := \
     com.android.location.provider \
     services \
     org.lineageos.platform \
+    org.eu.droid_ng.platform \
     ethernet-service
 
 PRODUCT_COPY_FILES += \
