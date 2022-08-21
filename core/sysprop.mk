@@ -152,7 +152,11 @@ endif
 ifeq ($(DEFAULT_SYSTEM_DEV_CERTIFICATE),build/make/target/product/security/testkey)
 BUILD_KEYS := test-keys
 else
+ifeq ($(DEV_KEYS_IS_ACTUALLY_RELEASE_KEYS),true)
+BUILD_KEYS := release-keys
+else
 BUILD_KEYS := dev-keys
+endif
 endif
 BUILD_VERSION_TAGS += $(BUILD_KEYS)
 BUILD_VERSION_TAGS := $(subst $(space),$(comma),$(sort $(BUILD_VERSION_TAGS)))
